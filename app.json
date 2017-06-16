@@ -1,0 +1,28 @@
+{
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "description": "Archive all outdated Slack channels.",
+  "env": {
+    "SLACK_TOKEN": {
+      "description": "The OAuth token with following scopes: channels.history, channels:read channels:write, and chat:write:bot",
+      "required": true
+    },
+    "SLACK_BOT_USERNAME": {
+      "description": "The name of user who post a message",
+      "required": true
+    },
+    "SLACK_BOT_ICON_EMOJI": {
+      "description": "The icon emoji of user who post a message",
+      "required": true
+    },
+    "SLACK_CHANNEL_PATTERN": {
+      "description": "regular expression to filter channels",
+      "required": true
+    }
+  },
+  "name": "Archive outdated Slack channels",
+  "repository": "https://github.com/aereal/archive-outdated-slack-channels"
+}
